@@ -1,0 +1,29 @@
+# /bin/bash
+
+get_delta_brightness()
+{
+  echo "$(($(brightnessctl i | awk -F 'Max brightness: ' '{print $2}')/100))"
+}
+
+decrease()
+{
+  brightnessctl s $(($(get_delta_brightness) * $1))-
+}
+
+increase()
+{
+  brightnessctl s $(($(get_delta_brightness) * $1))+
+}
+
+get_brightness()
+{
+  echo $(brightnessctl i) | cut -d'(' -f 2 | cut -d')' -f 1
+}
+
+while getopts "d:i:g:" flag; do
+  case "${flag}" in
+    d) decrease ${OPTARG};;
+    i) increase ${OPTARG};;
+    g) get_brightness;;
+  esac
+done
