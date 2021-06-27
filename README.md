@@ -21,9 +21,9 @@ $ cp brightnessctl_status /path/to/script/folder
 
 I am all about simplicity, if possible. As a user, I only need 3 things regarding screen-brightness management tools:
 
-- [increase](#increasing%20brightness) the brightness
-- [decrease](#decreasing%20brightness) the brightness
-- [get](#getting%20brightness) the current brightness
+- [increase](#increasing-brightness) the brightness
+- [decrease](#decreasing-brightness) the brightness
+- [get](#getting-brightness) the current brightness
 
 Thus, the tool has 3 simple options.
 
