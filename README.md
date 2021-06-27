@@ -1,0 +1,1 @@
+# brightnessctl_status
